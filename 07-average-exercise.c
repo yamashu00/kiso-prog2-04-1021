@@ -17,10 +17,12 @@ int main(void)
     int count = 5;
     int i;
 
-    for (i = 0; i < count; i++) {
+    for (i = 0; i < count; i++)
+    {
         sum += scores[i];
     }
 
-    printf("%d\n", sum / count);  /* ← 小数まで表示されるように、ここを直す */
+    printf("%.1f\n", (double)sum / count);
+
     return 0;
 }

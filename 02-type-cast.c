@@ -12,8 +12,8 @@
 
 int main(void)
 {
-    int a = 7;
-    int b = 2;
+    int a = 9;
+    int b = -5;
 
     printf("%d\n", a / b);
     printf("%f\n", (float)a / b);
