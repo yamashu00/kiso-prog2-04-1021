@@ -19,5 +19,6 @@ int main(void)
     short speed16 = (short)speed_int;
 
     printf("%d -> %d\n", speed_int, speed16);
+
     return 0;
 }
