@@ -13,7 +13,7 @@
 int main(void)
 {
     int scores[5] = {80, 75, 90, 65, 88};
-    int sum = 0;
+    float sum = 0;
     int count = 5;
     int i;
 
@@ -21,6 +21,6 @@ int main(void)
         sum += scores[i];
     }
 
-    printf("%d\n", sum / count);  /* ← 小数まで表示されるように、ここを直す */
+    printf("%0.1f\n", sum / count);  /* ← 小数まで表示されるように、ここを直す */
     return 0;
 }
