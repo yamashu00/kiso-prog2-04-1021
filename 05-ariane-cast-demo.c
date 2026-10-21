@@ -16,7 +16,7 @@ int main(void)
 {
     double speed = 40000.0;
     int speed_int = (int)speed;
-    short speed16 = (short)speed_int;
+    unsigned short speed16 = (short)speed_int;
 
     printf("%d -> %d\n", speed_int, speed16);
     return 0;

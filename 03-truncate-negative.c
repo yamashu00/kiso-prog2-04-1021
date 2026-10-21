@@ -11,7 +11,7 @@
 
 int main(void)
 {
-    printf("%d\n", (int)3.9);
+    printf("%d\n", (int)3.9999999999999999999);//9を16個入れると4になるらしい
     printf("%d\n", (int)-3.9);
     return 0;
 }
