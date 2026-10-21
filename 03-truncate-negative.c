@@ -13,5 +13,10 @@ int main(void)
 {
     printf("%d\n", (int)3.9);
     printf("%d\n", (int)-3.9);
+
+    /* 小数部分を取り除くので、負の数も0に近づく方向になる。 */
+    printf("(int)0.5 = %d\n", (int)0.5);
+    printf("(int)-0.5 = %d\n", (int)-0.5);
+    printf("(int)4.999 = %d\n", (int)4.999);
     return 0;
 }

@@ -14,9 +14,18 @@
 int main(void)
 {
     unsigned char c = 230;
-    int v = (int)c + 50;  /* ← 値や演算を変えて、下限を下回るケースを作ってみる */
-    unsigned char out = (unsigned char)((v > 255) ? 255 : v);  /* ← 下限のクランプをここに追加する */
+    int v = (int)c + 50;
+    /* intのまま0〜255に収めてからunsigned charに変換する。 */
+    unsigned char out = (unsigned char)((v < 0) ? 0 : ((v > 255) ? 255 : v));
 
+    printf("%d\n", out);
+
+    v = (int)c - 300;  /* 230 - 300 = -70 → 下限の0 */
+    out = (unsigned char)((v < 0) ? 0 : ((v > 255) ? 255 : v));
+    printf("%d\n", out);
+
+    v = (int)c - 30;  /* 230 - 30 = 200 → 範囲内なのでそのまま */
+    out = (unsigned char)((v < 0) ? 0 : ((v > 255) ? 255 : v));
     printf("%d\n", out);
     return 0;
 }

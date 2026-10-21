@@ -25,5 +25,19 @@ int main(void){
     show(leds);
     leds = leds & ~(1 << 0); /* 0番目を消す */
     show(leds);
+
+    leds = leds | (1 << 7); /* 7番目を点ける */
+    show(leds);
+
+    leds = leds | (1 << 3); /* 番号を変える例：3番目を点ける */
+    show(leds);
+    leds = leds & ~(1 << 2); /* 2番目を消す */
+    show(leds);
+
+    int n = 3; /* 0〜7の範囲で反転するLEDを指定する */
+    leds = leds ^ (1 << n); /* 点灯中の3番目を反転して消す */
+    show(leds);
+    leds = leds ^ (1 << n); /* もう一度反転すると点く */
+    show(leds);
     return 0;
 }

@@ -13,5 +13,9 @@ int main(void)
 {
     printf("%d\n", 7 / 2);
     printf("%f\n", (float)7 / 2);
+
+    /* 割り切れないと結果が変わり、割り切れると値は同じになる。 */
+    printf("8 / 3 = %d, (float)8 / 3 = %f\n", 8 / 3, (float)8 / 3);
+    printf("8 / 2 = %d, (float)8 / 2 = %f\n", 8 / 2, (float)8 / 2);
     return 0;
 }

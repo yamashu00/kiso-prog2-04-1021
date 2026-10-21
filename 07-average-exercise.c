@@ -21,6 +21,14 @@ int main(void)
         sum += scores[i];
     }
 
-    printf("%d\n", sum / count);  /* ← 小数まで表示されるように、ここを直す */
+    /* sumとcountはintなので、割る前にdoubleに変換する。 */
+    printf("%.1f\n", (double)sum / count);
+
+    scores[0] = 81;
+    sum = 0;
+    for (i = 0; i < count; i++) {
+        sum += scores[i];
+    }
+    printf("%.1f\n", (double)sum / count);  /* 点数変更後は79.8 */
     return 0;
 }
