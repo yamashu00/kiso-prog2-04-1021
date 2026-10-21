@@ -25,5 +25,10 @@ int main(void){
     show(leds);
     leds = leds & ~(1 << 0); /* 0番目を消す */
     show(leds);
+    leds = leds | (1 << 7); /* 7番目を点ける */
+    show(leds);
+    int n = 2;
+    leds = leds ^ (1 << n); /* n番目を反転する */
+    show(leds);
     return 0;
 }
