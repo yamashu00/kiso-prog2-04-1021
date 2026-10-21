@@ -11,7 +11,7 @@
 
 int main(void)
 {
-    printf("%d\n", 7 / 2);
-    printf("%f\n", (float)7 / 2);
+    printf("%d\n", 9 / 2); //4
+    printf("%f\n", (float)9 / 2); //4.5
     return 0;
 }

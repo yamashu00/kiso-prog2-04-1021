@@ -12,10 +12,10 @@
 
 int main(void)
 {
-    int a = 7;
+    int a = 11;
     int b = 2;
 
-    printf("%d\n", a / b);
-    printf("%f\n", (float)a / b);
+    printf("%d\n", a / b); //5.5
+    printf("%f\n", a / (float)b); //5.5
     return 0;
 }
