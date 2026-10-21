@@ -19,5 +19,16 @@ int main(void)
     short speed16 = (short)speed_int;
 
     printf("%d -> %d\n", speed_int, speed16);
+
+    speed = 30000.0;
+    speed_int = (int)speed;
+    speed16 = (short)speed_int;
+    printf("%d -> %d\n", speed_int, speed16);
+
+    speed = 32768.0;
+    speed_int = (int)speed;
+    speed16 = (short)speed_int;
+    /* 16bitのshortでは範囲外。この環境での予想は-32768（実装依存）。 */
+    printf("%d -> %d\n", speed_int, speed16);
     return 0;
 }

@@ -17,5 +17,12 @@ int main(void)
 
     printf("%d\n", a / b);
     printf("%f\n", (float)a / b);
+
+    a = 8;
+    b = 3;
+    printf("a / b = %d\n", a / b);
+    /* 片方がfloatなら、もう片方も変換されてから割り算する。 */
+    printf("(float)a / b = %f\n", (float)a / b);
+    printf("a / (float)b = %f\n", a / (float)b);
     return 0;
 }
