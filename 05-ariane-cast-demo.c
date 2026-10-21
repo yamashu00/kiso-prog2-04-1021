@@ -14,7 +14,7 @@
 
 int main(void)
 {
-    double speed = 40000.0;
+    double speed = 32768.0;
     int speed_int = (int)speed;
     short speed16 = (short)speed_int;
 
