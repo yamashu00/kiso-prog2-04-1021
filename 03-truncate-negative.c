@@ -15,3 +15,6 @@ int main(void)
     printf("%d\n", (int)-3.9);
     return 0;
 }
+
+
+// どちらの符号でも、0に向かって切り捨てる
