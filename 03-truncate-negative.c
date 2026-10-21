@@ -11,7 +11,7 @@
 
 int main(void)
 {
-    printf("%d\n", (int)3.9);
-    printf("%d\n", (int)-3.9);
+    printf("%d\n", (int)0.5); //0
+    printf("%d\n", (int)-0.5); //0
     return 0;
 }
