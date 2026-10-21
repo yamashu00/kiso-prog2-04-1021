@@ -17,6 +17,6 @@ int main(void)
 {
     double x = 3.7;
 
-    printf("%d\n", (int)(x + 0.5));  /* ← 負の数でも正しく四捨五入されるように、ここを書き換える */
+    printf("%d\n", (int)(x - 0.5));  /*(int)キャストは0方向への切り捨てだから。*/
     return 0;
 }

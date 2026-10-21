@@ -19,11 +19,24 @@ void show(unsigned char leds){
 
 int main(void){
     unsigned char leds = 0;
-    leds = leds | (1 << 0); /* 0番目を点ける */
+
+    /* ① 点けるビットの番号を変えてみる */
+    leds = leds | (1 << 1);  /* 1番目を点ける */
     show(leds);
-    leds = leds | (1 << 2); /* 2番目を点ける */
+
+    leds = leds | (1 << 4);  /* 4番目を点ける */
     show(leds);
-    leds = leds & ~(1 << 0); /* 0番目を消す */
+
+    leds = leds & ~(1 << 1); /* 1番目を消す */
     show(leds);
+
+    /* ② 7番目のLEDを点ける */
+    leds = leds | (1 << 7);
+    show(leds);
+
+    /* ③ ^ を使って4番目のLEDを反転する */
+    leds = leds ^ (1 << 4);
+    show(leds);
+
     return 0;
 }
