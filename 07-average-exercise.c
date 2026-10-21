@@ -21,6 +21,8 @@ int main(void)
         sum += scores[i];
     }
 
-    printf("%d\n", sum / count);  /* ← 小数まで表示されるように、ここを直す */
+    /* sum も count も int なので、キャストなしの割り算は整数の割り算になり
+       79.6 が 79 に切り捨てられてしまう。sum を double にキャストしてから割る */
+    printf("%f\n", (double)sum / count);  /* 79.6 */
     return 0;
 }
