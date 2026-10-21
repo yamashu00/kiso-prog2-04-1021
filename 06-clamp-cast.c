@@ -9,13 +9,16 @@
 //   ① 0未満になった場合は「0」にクランプされるように、条件式を追加・修正する
 //   ② 修正後、上限・下限どちらのケースでも正しくクランプされるか確認する
 // ==================================================
+
+
 #include <stdio.h>
 
 int main(void)
 {
-    unsigned char c = 230;
-    int v = (int)c + 50;  /* ← 値や演算を変えて、下限を下回るケースを作ってみる */
-    unsigned char out = (unsigned char)((v > 255) ? 255 : v);  /* ← 下限のクランプをここに追加する */
+    unsigned char c = 0;
+    int v = (int)c - 10;
+
+    unsigned char out = (unsigned char)((v > 255) ? 255 : (v < 0) ? 0 : v);
 
     printf("%d\n", out);
     return 0;

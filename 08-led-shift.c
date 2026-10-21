@@ -19,11 +19,11 @@ void show(unsigned char leds){
 
 int main(void){
     unsigned char leds = 0;
-    leds = leds | (1 << 0); /* 0番目を点ける */
+    leds = leds | (2 << 0); /* 0番目を点ける */
     show(leds);
-    leds = leds | (1 << 2); /* 2番目を点ける */
+    leds = leds | (1 << 3); /* 2番目を点ける */
     show(leds);
-    leds = leds & ~(1 << 0); /* 0番目を消す */
+    leds = leds & ~(1 << 3); /* 0番目を消す */
     show(leds);
     return 0;
 }
